@@ -215,6 +215,14 @@ Name =name.upper() #converts the string to uppercase
 print(Name) #prints the string in uppercase
 
 
+x = "Python "
+y = "is "
+print(id(y)) #prints the memory address of the variable
+z = "awesome"
+print(x + y + z) #prints the concatenated string
 
 
-
+x = 5
+y = "John"
+print(id(y)) #prints the memory address of the variable
+print(x, y,x,y,z) #prints the integer and string with a space in between
