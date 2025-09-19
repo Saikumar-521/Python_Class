@@ -24,9 +24,9 @@ ggydyu
 #2.float
 #3.complex
 #4.bool
+#1.str
 #non-primitives:
 #non-primitive data types are store the multiple values and it is mutable
-#1.str
 #2.list
 #3.tuple
 #4.set
