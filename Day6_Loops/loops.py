@@ -151,3 +151,35 @@ print("\033[31mThis is Red\033[0m")
 print("\033[32mThis is Green\033[0m")
 print("\033[33mThis is Yellow\033[0m")
 print("\033[34mThis is Blue\033[0m")
+
+
+# jumping statements in python
+# 1.break
+# Used to terminate the loop immediately, even if the loop condition is still true.
+for i in range(1, 10):
+    if i == 5:
+        break
+    print(i)
+
+# continue
+# Skips the current iteration and moves to the next one.
+for i in range(1, 6):
+    if i == 3:
+        continue
+    print(i)
+
+# pass
+# A null statement (does nothing).
+# Used as a placeholder when code is syntactically required but you don’t want to execute anything yet.
+
+
+
+# assert
+# The assert keyword in Python is used for debugging and testing. 
+# It helps check if a condition is True while your program is running.
+# If the condition is False, it raises an AssertionError (optionally with a message).
+# synatx: assert condition, message
+
+x = 10
+assert x > 0
+print("x is positive")
