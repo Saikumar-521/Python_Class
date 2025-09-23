@@ -24,8 +24,7 @@ print(id(s))   # memory location of "Hello"
 s = s + "!"
 print(id(s))   # different memory location (new object)
 
-
-
+# The variable s is updated to point to the new string, while "Hello" may be garbage-collected if no reference exists.
 
 
 
@@ -38,9 +37,12 @@ print(a<b)
 print(a>=b)
 print(dir(str))
 
+
+
+
 # string slicing:in Python, string slicing is used to extract a portion (substring) 
 # from a string. It works using the slicing operator [:].
-# string[start:end:step]
+# string[start:end:step]----------->by default the start value is index-zero and end-value is (string-length)-1,and step value is 1
 # start → index where slice begins (inclusive).
 # end → index where slice stops (exclusive).
 # step → interval (default = 1).
@@ -121,3 +123,117 @@ print(name.center(15,'*'))
 # Pads the string on the left with 0s until it reaches given width.
 # Useful for formatting numbers.
 print(name.zfill(20))
+
+
+# split() method in python
+# purspose: split a string into list, based on a separator
+# syntax: 
+# string.split(separator,maxsplit)
+text="apple,banana,cherry"
+print(text)
+print(text.split(","))
+print(text.split(" ",2))
+line="Hello world from python"
+print(line.split(" ",2)) #it will be print first two space occerence of words then remainng words willprint
+
+# join() 
+# purpose: joins elements of alist (or anyiterable) into a single string, with a separator
+# separator.join(iterable) 
+word=['sai','kumar','yadavs']
+print(",".join(word))
+print(" ".join(word))
+print("-".join(word))
+
+# replace()
+# purpose replace a substring with another substring
+# string.replace(old,new,count)->count is optinal
+
+text='''red is rose
+rose is flower
+flower is your
+your is my lover'''
+print(text.replace('your','sam'))
+print(text.replace('is',"❣️",2)) #here first two occerence of (is ) is replaced with the heart symbol
+print(text)
+
+
+# rsplit(separator,maxsplit)
+# string.rsplit(separator,maxsplit)
+
+number="one two three four"
+print(number.split(" ",2))
+print(number.rsplit(" ",2))
+
+# splitlines()
+# splits a string into list at line breaks(\n,\r,\r\n)
+print(text.splitlines())
+
+# prefix ad suffix
+# startswith()
+# purpose: checks if a string starts with the given prefix
+# syntax: string.strartswith(prefix,strat,end)
+
+# prefix → string (or tuple of strings) to check.
+# start → optional, index to start searching.
+# end → optional, index to end searching.
+# Returns: True or False
+
+text="python programming is easy"
+print(text.startswith("python")) #true
+print(text.startswith("python",4)) #false
+print(text.startswith(("Python","python","java"))) #-------> it is the tuple of string
+
+# endswith()
+# purpose: checks if a srting ends with the given suffix
+# syntax: string.endswith(suffix,start,end)
+print(text.endswith('easy'))
+print(text.endswith('is',0,19))
+
+# removesuffix
+# removepreffix
+# Purpose: Removes a prefix from a string if it exists.
+# string.removeprefix()
+
+text="remove from preffix method"
+print(text.removeprefix('re'))
+print(text.removeprefix('remove'))
+print(text.removeprefix('from')) #no chnage from string
+
+# removeSuffix()
+# Purpose: Removes a suffix from a string if it exists.
+# syntax: string.removesuffix(suffix)
+filname="report.pdf"
+print(filname.removesuffix(".pdf"))
+print(filname.removesuffix(".txt"))
+
+
+# partition()
+# Purpose: Splits a string into 3 parts based on the first occurrence of a separator.
+# syntax: string.partition(saparator)
+
+# Returns: a tuple → (before, separator, after)
+# If the separator is not found → returns (string, '', '').
+text = "apple,banana,cherry"
+
+# Split at first comma
+print(text.partition(","))  
+# ('apple', ',', 'banana,cherry')
+
+# Separator not found
+print(text.partition(";"))  
+# ('apple,banana,cherry', '', '')
+
+# rpartition()
+# Purpose: Same as partition(), but splits at the last occurrence of the separator.
+# Returns: a tuple → (before, separator, after)
+# If separator is not found → returns ('', '', string).
+
+text = "apple,banana,cherry"
+
+# Split at last comma
+print(text.rpartition(","))  
+# ('apple,banana', ',', 'cherry')
+
+# Separator not found
+print(text.rpartition(";"))  
+# ('', '', 'apple,banana,cherry')
