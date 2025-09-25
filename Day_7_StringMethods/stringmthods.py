@@ -237,3 +237,55 @@ print(text.rpartition(","))
 # Separator not found
 print(text.rpartition(";"))  
 # ('', '', 'apple,banana,cherry')
+
+
+
+
+'''
+| **Category**                           | **Method**                 | **Definition / Use**                                                            |
+| -------------------------------------- | -------------------------- | ------------------------------------------------------------------------------- |
+| **Case Conversion**                    | `upper()`                  | Converts all characters to **uppercase**                                        |
+|                                        | `lower()`                  | Converts all characters to **lowercase**                                        |
+|                                        | `capitalize()`             | Capitalizes **first character** of string                                       |
+|                                        | `title()`                  | Capitalizes **first letter of each word**                                       |
+|                                        | `swapcase()`               | Swaps case → lowercase → uppercase and vice versa                               |
+|                                        | `casefold()`               | Converts to lowercase (stronger than `lower()`, handles special chars like `ß`) |
+| **Search & Check (Boolean / Enquiry)** | `startswith(prefix)`       | Checks if string starts with given prefix                                       |
+|                                        | `endswith(suffix)`         | Checks if string ends with given suffix                                         |
+|                                        | `isalnum()`                | True if all characters are letters or digits                                    |
+|                                        | `isalpha()`                | True if all characters are alphabets                                            |
+|                                        | `isdigit()`                | True if all characters are digits (0–9)                                         |
+|                                        | `isdecimal()`              | True if all are decimal numbers only                                            |
+|                                        | `isnumeric()`              | True if numeric (digits, fractions, unicode numbers)                            |
+|                                        | `isspace()`                | True if only whitespace characters                                              |
+|                                        | `islower()`                | True if all alphabets are lowercase                                             |
+|                                        | `isupper()`                | True if all alphabets are uppercase                                             |
+|                                        | `istitle()`                | True if string follows Title Case                                               |
+|                                        | `isascii()`                | True if all characters are ASCII (0–127)                                        |
+| **Modification (Replace & Remove)**    | `replace(old, new, count)` | Replaces substring with another, `count` = how many replacements                |
+|                                        | `removeprefix(x)`          | Removes given prefix if present (Python 3.9+)                                   |
+|                                        | `removesuffix(x)`          | Removes given suffix if present (Python 3.9+)                                   |
+| **Splitting & Joining**                | `split(sep, maxsplit)`     | Splits string into list at separator (from left)                                |
+|                                        | `rsplit(sep, maxsplit)`    | Splits string into list at separator (from right)                               |
+|                                        | `splitlines(keepends)`     | Splits string into lines (`\n`, `\r\n`)                                         |
+|                                        | `partition(sep)`           | Splits into 3 parts → (before, sep, after) at first occurrence                  |
+|                                        | `rpartition(sep)`          | Splits into 3 parts → (before, sep, after) at last occurrence                   |
+|                                        | `join(iterable)`           | Joins elements of iterable into a string with a separator                       |
+| **Trimming / Removing Spaces**         | `strip(chars)`             | Removes leading & trailing whitespace (or given chars)                          |
+|                                        | `lstrip(chars)`            | Removes leading whitespace (or given chars)                                     |
+|                                        | `rstrip(chars)`            | Removes trailing whitespace (or given chars)                                    |
+| **Alignment & Formatting**             | `center(width, fillchar)`  | Centers string within given width                                               |
+|                                        | `ljust(width, fillchar)`   | Left aligns string in given width                                               |
+|                                        | `rjust(width, fillchar)`   | Right aligns string in given width                                              |
+|                                        | `zfill(width)`             | Pads string with zeros on the left                                              |
+|                                        | `format()`                 | String formatting using `{}` placeholders                                       |
+|                                        | `format_map(dict)`         | Similar to `format()` but works with dictionary                                 |
+| **Searching & Finding**                | `find(sub, start, end)`    | Returns first index of substring (or -1 if not found)                           |
+|                                        | `rfind(sub, start, end)`   | Returns last index of substring (or -1 if not found)                            |
+|                                        | `index(sub, start, end)`   | Like `find()` but raises error if not found                                     |
+|                                        | `rindex(sub, start, end)`  | Like `rfind()` but raises error if not found                                    |
+|                                        | `count(sub, start, end)`   | Counts occurrences of substring                                                 |
+| **Encoding & Bytes**                   | `encode(encoding, errors)` | Encodes string into bytes                                                       |
+| **Other Utility**                      | `expandtabs(tabsize)`      | Replaces `\t` with spaces (default tabsize=8)                                   |
+
+'''
