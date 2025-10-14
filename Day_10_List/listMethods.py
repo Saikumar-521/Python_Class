@@ -39,7 +39,9 @@ print(f'l2 is {l2}')
 l2 +=[6,7,8]  #list contatination
 print(l2)
 print(id(l2))
-
+l3=['appending','updating']
+l2 += l3
+print(l2)
 # Slicing means extracting a portion (sub-list) of a list by using index ranges.
 # In Python, slicing is done using the syntax:
 # list[start : stop : step]
@@ -156,12 +158,36 @@ print(number[::-1])
 | `extend(iterable)`              | Add all elements from iterable                   |
 | `insert(i, x)`                  | Insert `x` at index `i`                          |
 | `remove(x)`                     | Remove first occurrence of `x`                   |
-| `pop([i])`                      | Remove & return item at index `i` (default last) |
+| `pop([i])`                      | Remove & return item at index `i` (default last), The method pop() can remove an element from any position in the list. The parameter supplied to thismethod is the index of the element to be removed. |
 | `clear()`                       | Remove all items                                 |
 | `index(x[, start[, end]])`      | Return index of `x`                              |
 | `count(x)`                      | Count occurrences of `x`                         |
-| `sort(key=None, reverse=False)` | Sort list in place                               |
+| `sort(key=None, reverse=False)` | Sort list in place    if key=len based on the lenght will sorted    |
 | `reverse()`                     | Reverse list in place                            |
 | `copy()`                        | Shallow copy of list                             |
 
 '''
+
+# l=list(9)
+# print(l)  #TypeError: 'int' object is not iterable
+# inserting element where in same indexing
+l=[1,2,3,4,5,6]
+print(l)
+l.insert(1,'two')
+print(l)
+
+sent = "The mall has excellent sales right now."
+print(sent)
+wrds = sent.split() 
+print(wrds)
+wrds[1] = 'store'
+new_sent = " ".join(wrds)
+print(new_sent)
+sentence='join converts from list into string'
+print(sentence)
+sen_new="*".join(sentence)
+print(sen_new)
+print(sen_new.split())
+print(type(sen_new))
+
+
