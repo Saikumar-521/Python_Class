@@ -118,3 +118,33 @@ def fun3(a, b, /, c, *, d, e):
     print(a, b, c, d, e,'its a combination of positinol and keyword args')
 
 fun3(1,2,3,d=4,e=5)
+
+
+'''
+Important Note (Python-specific)
+
+Python passes arguments by object reference (often called pass-by-assignment):
+
+If you pass immutable objects (like int, str, tuple), changes inside the function don’t affect the original variable.
+If you pass mutable objects (like list, dict), changes inside the function do affect the original object.
+
+
+'''
+def show(x, y):
+    x=y
+    return x+y,x,y
+
+a = 100
+b = 200
+print(a,b)
+s=show(a, b)
+print(s)
+print(a,b)
+
+def modify_list(lst):
+    lst.append(4)
+
+nums = [1, 2, 3]
+print(nums)
+modify_list(nums)
+print(nums)  # Output: [1, 2, 3, 4]
