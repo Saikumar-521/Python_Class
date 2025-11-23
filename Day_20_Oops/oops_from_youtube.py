@@ -275,6 +275,11 @@ s2=student(56,78,98)
 res=s1.avg()
 print(res)
 print(s2.avg())
+def sum(self): #dynamically creating instance method
+    return (self.m1+self.m2)
+
+student.sum=sum
+print(s1.sum())
 
 print('printing class variables using class methods')
 # print(student.info()) TypeError: student.info() missing 1 required positional argument: 'cls'---------------with out using @classmethod decorator
