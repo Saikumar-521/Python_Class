@@ -1,0 +1,97 @@
+DDl commands(data definition languange):
+DDl (data definition languange) refers to SQL commands that are used to
+define, modify, or delete the structure of database objects
+such as tables,view,indexes and triggers
+
+C-create
+A-alter
+T-truncate
+D-drop
+R-rename
+
+1.create:
+the create command is used to create new database objects like
+tables,views, indexes or triggers
+
+Syntax:
+CREATE TABLE table_name(
+    column1 datatype constraint,
+    column2 datatype constraint,
+    ..................................
+);
+
+example:
+
+CREATE TABLE student (
+  rollno INTEGER PRIMARY KEY AUTOINCREMENT,
+  name TEXT NOT NULL,
+  dept_id INTEGER
+);
+
+
+
+---------------------------------------------------------------
+2.Alter command
+
+the Alter command is used to modify the structure of an existing table
+such as adding or renaming a column or renaming a table
+
+Synatx:
+
+ALTER TABLE table_name ADD COLUMN age integer;
+
+example:
+alter table student rename to students;
+
+if it is column name:
+alter table table_name rename column name to new_colmun_name
+
+-------------------------------------------------------------------------
+
+3.Drop command:
+
+the drop command is used to permanently delete an existing
+database objects such as table,view or index.
+---------💞💘(Once dropped, all data and structure are lost.)----------------------------
+
+Syntax:
+drop table table_name;
+
+drop table student;
+
+delete permanently with structure of database,
+--------------------------------------------------------------------------------------------
+4.truncate command:
+truncate is used in other SQL database to remove all rows from a table
+without deleteing its structure.
+
+
+📘 SQLite Alternative:
+SQLite does not support TRUNCATE.❎❎❎❎❎
+
+instead we delete✅✅✅✅✅✅
+
+ DELETE FROM student;
+To remove all rows but keep the table.
+
+
+----------------------------------------------------------------------------------
+5.RENAME command
+the rename command is used to change the name of an exsting table or
+column.
+
+Synatx:
+
+ALTER TABLE student RENAME TO student_data;
+ALTER TABLE student_data RENAME COLUMN name TO full_name;
+
+---------------------------------------------------------------------------
+
+
+✅ Summary Table
+Command	 Full Form	          Definition	                                         Example
+CREATE	 Create new objects	   Defines a new table, view, index, or trigger	         CREATE TABLE student (...);
+ALTER	 Modify structure	   Adds or renames columns or tables	                 ALTER TABLE student ADD COLUMN age INTEGER;
+DROP	 Delete objects	       Removes tables, views, or indexes permanently	     DROP TABLE student;
+TRUNCATE 	Clear all data	   Not supported in SQLite (use DELETE)	                 DELETE FROM student;
+RENAME	 Rename object	       Changes table or column name	                         ALTER TABLE student RENAME TO students;
